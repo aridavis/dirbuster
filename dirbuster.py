@@ -4,7 +4,7 @@ from itertools import combinations
 wordlist = [
     "berspasi juga", "kucing", "folder", "meong", "secret", "key.py  ", "miaw", "gadak ini", "aa.txt"
 ]
-URL = "https://github.com/aridavis/dirbuster/tree/master"
+URL = "localhost:8080"
 
 if __name__ == "__main__":
     res = requests.get("https://jsonplaceholder.typicode.com/todos/1")
