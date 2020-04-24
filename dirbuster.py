@@ -2,11 +2,13 @@ import requests
 from itertools import combinations 
 
 wordlist = [
-    "berspasi juga", "aa.txt"
+    "berspasi juga", "kucing", "folder", "meong", "secret", "key.py  ", "miaw", "gadak ini", "aa.txt"
 ]
 URL = "https://github.com/aridavis/dirbuster/tree/master"
 
 if __name__ == "__main__":
+    res = requests.get("https://jsonplaceholder.typicode.com/todos/1")
+    print(str(res.status_code) + "\n" + res.text)
 
     wordlist = map(lambda x: x.strip(), wordlist)
     wordlist = map(lambda x: x.replace(" ", "%20"), wordlist)
