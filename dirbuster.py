@@ -14,7 +14,6 @@ if __name__ == "__main__":
     wordlist = map(lambda x: x.replace(" ", "%20"), wordlist)
     wordlist = list(wordlist)
 
-    x = 0
     for i in range(0, len(wordlist)):
         combination = list(combinations(wordlist,i+1))
         for j in range(0,len(combination)):
