@@ -2,9 +2,9 @@ import requests
 from itertools import combinations 
 
 wordlist = [
-    "kucing", "folder", "meong", "secret", "key.py  ", "miaw", "hai", "ada spasi"
+    "berspasi juga", "aa.txt"
 ]
-URL = "https://github.com/aridavis/dirbuster"
+URL = "https://github.com/aridavis/dirbuster/tree/master"
 
 if __name__ == "__main__":
 
@@ -19,10 +19,6 @@ if __name__ == "__main__":
             postfix = ""
             for k in range(0, i+1):
                 postfix = postfix + "/{}".format(combination[j][k])
-            # x = x + 1
             res = requests.get(URL + postfix)
             if(res.status_code == 200):
                 print(URL + postfix)
-            else:
-                print("Ga masok")
-    print(x)
